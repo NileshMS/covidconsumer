@@ -1,0 +1,17 @@
+{% extends 'common.html' %}
+{% block content %}
+    <table class="table-responsive centered">
+        <thead>
+        <tr>
+            <th class="#e6ee9c lime lighten-3  deep-orange-text lighten-1"><h3>{{ state }}</h3></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for district in  districts %}
+            <tr>
+                <td><a href="{% url 'district_info' my_state=state my_district=district  %}">{{ district }}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

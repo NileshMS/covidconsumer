@@ -1,0 +1,21 @@
+{% extends 'common.html' %}
+{% block content %}
+    <table class="table-responsive centered">
+        <thead>
+        <tr>
+            <th class="#e6ee9c lime lighten-3  deep-orange-text lighten-1"><h5>Indian States</h5></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for state in  states %}
+            <tr>
+                <td><a href="{% url 'districts' state  %}">{{ state }}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+
+
+
